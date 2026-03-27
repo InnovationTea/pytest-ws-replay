@@ -1,0 +1,14 @@
+image: python:3.11-slim
+
+before_script:
+  - python --version
+  - pip --version
+  - pip install -r requirements.txt
+  - pip install pytest pytest-asyncio websockets
+
+test:
+  script:
+    - pytest tests/unit/ -v
+  only:
+    - main
+    - master

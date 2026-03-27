@@ -1,0 +1,14 @@
+/.idea
+/.claude
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# 虚拟环境
+venv/
+env/

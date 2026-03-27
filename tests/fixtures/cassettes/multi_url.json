@@ -1,0 +1,16 @@
+{
+  "ws://example.com/chat": [
+    {
+      "type": "interaction",
+      "request": "chat message",
+      "response": ["chat response"]
+    }
+  ],
+  "ws://example.com/updates": [
+    {
+      "type": "interaction",
+      "request": "subscribe",
+      "response": ["update 1", "update 2"]
+    }
+  ]
+}
