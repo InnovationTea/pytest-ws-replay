@@ -1,0 +1,15 @@
+{
+  "url": "ws://example.com/test",
+  "interactions": [
+    {
+      "type": "interaction",
+      "request": "Hello",
+      "response": ["Hello back"]
+    },
+    {
+      "type": "interaction",
+      "request": null,
+      "response": ["Server message"]
+    }
+  ]
+}
