@@ -1,0 +1,22 @@
+name: pytest CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pytest_test:
+    runs-on: ubuntu-latest
+    container: python:3.9  
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pytest
+
+      - name: Run unit tests
+        run: pytest tests/unit/ -v 
