@@ -19,4 +19,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests
-        run: run: PYTHONPATH=. pytest tests/unit/ -v
+        run: PYTHONPATH=. pytest tests/unit/ -v
