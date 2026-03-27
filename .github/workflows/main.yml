@@ -1,4 +1,4 @@
-name: pytest CI
+name: pytest-ws-replay
 
 on:
   push:
@@ -19,4 +19,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests
-        run: pytest tests/unit/ -v 
+        run: run: PYTHONPATH=. pytest tests/unit/ -v
