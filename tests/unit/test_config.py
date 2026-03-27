@@ -38,7 +38,7 @@ class TestVCRConfig:
         config = VCRConfig()
         path = config.cassette_path
         assert isinstance(path, Path)
-        assert str(path).endswith("cassette\websocket_recording")
+        assert path.parts[-2:] == ("cassette", "websocket_recording")
 
     def test_vcr_config_cassette_path_with_project_root(self):
         """Test cassette_path with custom project_root."""
@@ -46,7 +46,7 @@ class TestVCRConfig:
         path = config.cassette_path
         assert isinstance(path, Path)
         assert str(path).startswith("\custom\path")
-        assert str(path).endswith("cassette\websocket_recording")
+        assert path.parts[-2:] == ("cassette", "websocket_recording")
 
 
 class TestMatcherConfig:
