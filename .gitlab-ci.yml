@@ -1,14 +1,12 @@
-image: python:3.11-slim
+stages:
+  - test
 
-before_script:
-  - python --version
-  - pip --version
-  - pip install -r requirements.txt
-  - pip install pytest pytest-asyncio websockets
-
-test:
+pytest_test:
+  stage: test
+  tags:
+    - shared 
+  image: python:3.9
   script:
+    - pip install --upgrade pip
+    - pip install pytest
     - pytest tests/unit/ -v
-  only:
-    - main
-    - master
